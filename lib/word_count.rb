@@ -15,7 +15,7 @@ class String
 end
 class String
   define_method(:word_evaluator) do |word|
-    if word == self
+    if word.downcase == self.downcase
       true
     else
       false
