@@ -11,10 +11,19 @@ describe('String#word_evaluator') do
   end
 end
 describe("string#word_identify") do
-  it("recognize if a word appears in a sentence/string") do
-    expect("hello world".word_identify("hello")).to(eq(true))
+  # it("recognize if a word appears in a sentence/string") do
+  #   expect("hello world".word_identify("hello")).to(eq(true))
+  # end
+  # it("recognize if a word does not appear in a sentence/string") do
+  #   expect("hello word".word_identify("what")).to(eq(false))
+  # end
+  it("recognize how many times the user_word appears in the sentence/string and returns the number") do
+    expect("hello word".word_identify("hello")).to(eq(1))
   end
-  it("recognize if a word does not appear in a sentence/string") do
-    expect("hello word".word_identify("what")).to(eq(false))    
+  it("recognize how many times the user_word appears in the sentence/string and returns the number") do
+    expect("hello word hello hello".word_identify("hello")).to(eq(3))
+  end
+  it("recognize how many times the user_word appears in the sentence/string and returns the number including the value 0") do
+    expect("hello word hello hello".word_identify("what")).to(eq(0))
   end
 end
