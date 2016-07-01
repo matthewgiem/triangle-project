@@ -12,11 +12,11 @@ Word Count
 
 |Behavior    |Input   |Output   |
 |---|---|---|
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-
+|  recognize if two words are the same | "hello" , "hello" | true  |
+|  recognize if a given word is in a sentence | "hello" , "hello world"  |  true |
+|  recognize if two words are the same irregardless of case | "hello" , "HellO" | true  |
+|  output how many times the word appears in a sentence | "hello word hello" , "hello" | 2 |
+|  give emphasis the words that appear in the sentence | "hello world hello" , "hello" | 2, "<strong>hello</strong> world <strong>hello</strong>"  |
 
 ## Setup/Installation Requirements
 
