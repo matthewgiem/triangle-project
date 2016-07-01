@@ -15,21 +15,21 @@ class String
 end
 class String
   define_method(:word_evaluator) do |word|
-    if word.downcase == self.downcase 
+    if word.downcase == self.downcase
       true
     else
       false
     end
   end
 end
-# class String
-#   define_method(:sentence_return) do |user_word|
-#     self.split(" ").each do |word|
-#       if word.word_evaluator(user_word)
-#         word = <srong>word</word>
-#       end
-#     end
-#     word_exist
-#     word_counter
-#   end
-# end
+class String
+  define_method(:sentence_return_highlighted) do |user_word|
+    self.downcase!()
+    arr = self.split(" ").each do |word|
+      if word.word_evaluator(user_word)
+        word.upcase!()
+      end
+    end
+    arr.join(" ")
+  end
+end
